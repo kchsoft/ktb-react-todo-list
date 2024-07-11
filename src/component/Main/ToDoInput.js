@@ -1,7 +1,33 @@
 
 import React from 'react'
 
-const ToDoInput = ({addToDoItem,toDoRef}) => {
+const ToDoInput = ({setToDoList,toDoList,toDoRef}) => {
+
+  const addToDoItem = () => {
+    const item = toDoRef.current.value
+    if(item.trim() === '') return
+    if(checkDuplicateToDo(item)) return
+
+    const newToDo = {
+      registerDate : new Date(),
+      toDo : item,
+      complete : false,
+      completeDate : undefined
+    }
+    console.log((newToDo.registerDate))
+
+    setToDoList((oldList) => [...oldList,newToDo])
+    toDoRef.current.value = ''
+  }
+
+  const checkDuplicateToDo = (item) => {
+    if(toDoList.some((toDo) => toDo.toDo === item)){
+      alert("중복된 ToDo가 있습니다.")
+      return true
+    }
+    return false
+  }
+  
   return (
     <section className='todoinput'>
       <input type="text" ref={toDoRef} placeholder='할 일을 적어 주세요! :)'/>
