@@ -2,10 +2,9 @@
   display: none;
 }
 
-.inputname{
-
-}
-
-.displayname{
-  
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; /* 화면 전체 높이 사용 */
 }

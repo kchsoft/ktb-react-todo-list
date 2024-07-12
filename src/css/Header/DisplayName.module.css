@@ -1,0 +1,33 @@
+.display-name {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline; /* 버튼을 아래로 배치 */
+  justify-content: center;
+  gap: 10px; /* 요소 간의 간격 추가 */
+}
+
+.welcome-comment {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.name-modify-btn {
+  border-radius: 10px;
+  border: none;
+  background-color: #28a745; /* 버튼을 녹색으로 설정 */
+  color: white;
+  padding: 0px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 30px;
+}
+
+.name-modify-btn:hover {
+  background-color: #218838; /* 버튼 호버 시 색상 변경 */
+}
+
+.name-modify-btn:active {
+  transform: scale(0.98); /* 클릭 시 살짝 줄어듦 */
+}
