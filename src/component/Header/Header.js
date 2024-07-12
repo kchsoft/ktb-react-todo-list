@@ -6,13 +6,13 @@ import styles from '../../css/Header/Header.module.css'
 const Header = () =>{
   const [name,setName] = useState("")
   const nameRef = useRef("")
-  const [inputClass,setInputClass] = useState("inputname")
-  const [displayClass,setDisplayClass] = useState(`displayname ${styles.hidden}`)
+  const [inputClass,setInputClass] = useState("input-name")
+  const [displayClass,setDisplayClass] = useState(`display-name ${styles.hidden}`)
 
   const submitName = () =>{
     setName(nameRef.current.value)
-    setInputClass(`inputname ${styles.hidden}`)
-    setDisplayClass("displayname")
+    setInputClass(`input-name ${styles.hidden}`)
+    setDisplayClass("display-name")
   }
 
   const modifyName = () =>{

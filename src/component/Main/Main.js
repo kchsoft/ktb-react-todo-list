@@ -9,7 +9,7 @@ const Main = () => {
   return( 
   <main>
     <ToDoInput setToDoList={setToDoList} toDoList={toDoList} toDoRef={toDoRef}/>
-    <ToDoList toDoList={toDoList}/>
+    <ToDoList toDoList={toDoList} setToDoList={setToDoList}/>
   </main>
   )
 };

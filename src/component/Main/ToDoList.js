@@ -1,12 +1,12 @@
 import React from 'react'
 import ToDoItem from './ToDoItem'
 
-const ToDoList = ({toDoList}) => {
+const ToDoList = ({toDoList,setToDoList}) => {
   return (
-    <section className='todolist'>
+    <section className='todo-list'>
       <div className="need to set table">
         {toDoList.map(toDo => {
-            return <ToDoItem key={toDo.registerDate} toDo={toDo}/>
+            return <ToDoItem key={toDo.registerDate} toDo={toDo} setToDoList={setToDoList}/>
           })
         }  
       </div>

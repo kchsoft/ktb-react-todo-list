@@ -14,12 +14,11 @@ const ToDoInput = ({setToDoList,toDoList,toDoRef}) => {
       complete : false,
       completeDate : undefined
     }
-    console.log((newToDo.registerDate))
 
     setToDoList((oldList) => [...oldList,newToDo])
     toDoRef.current.value = ''
   }
-
+  
   const checkDuplicateToDo = (item) => {
     if(toDoList.some((toDo) => toDo.toDo === item)){
       alert("중복된 ToDo가 있습니다.")
@@ -29,7 +28,7 @@ const ToDoInput = ({setToDoList,toDoList,toDoRef}) => {
   }
   
   return (
-    <section className='todoinput'>
+    <section className='todo-input'>
       <input type="text" ref={toDoRef} placeholder='할 일을 적어 주세요! :)'/>
       <button onClick={addToDoItem}> 작성 </button>
     </section>
