@@ -5,7 +5,7 @@
   margin-top : 10px;
 }
 
-.todo-input input {
+.todo-input-text {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -13,7 +13,7 @@
   width: 300px;
 }
 
-.todo-input button {
+.todo-input-btn {
   border-radius: 5px;
   border: none;
   background-color: #007BFF;
@@ -25,10 +25,10 @@
   transition: background-color 0.3s ease;
 }
 
-.todo-input button:hover {
+.todo-input-btn:hover {
   background-color: #0056b3;
 }
 
-.todo-input button:active {
+.todo-input-btn:active {
   transform: scale(0.98);
 }

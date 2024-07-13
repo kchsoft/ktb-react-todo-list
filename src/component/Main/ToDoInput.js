@@ -22,7 +22,7 @@ const ToDoInput = ({setToDoList,toDoList,toDoRef}) => {
   
   const checkDuplicateToDo = (item) => {
     if(toDoList.some((toDo) => toDo.toDo === item)){
-      alert("중복된 ToDo가 있습니다.")
+      alert("중복된 [할 일]이 있습니다.")
       return true
     }
     return false
@@ -30,8 +30,8 @@ const ToDoInput = ({setToDoList,toDoList,toDoRef}) => {
   
   return (
     <section className={styles['todo-input']}>
-      <input type="text" ref={toDoRef} placeholder='할 일을 적어 주세요! :)'/>
-      <button onClick={addToDoItem}> 작성 </button>
+      <input type="text" className={styles['todo-input-text']} ref={toDoRef} placeholder='할 일을 적어 주세요! :)'/>
+      <button className={styles['todo-input-btn']} onClick={addToDoItem}> 작성 </button>
     </section>
   )
 }
