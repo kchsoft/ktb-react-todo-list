@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import styles from '../../css/Footer/Weather.module.css'
 
 const weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=fdb568b79dbec452976c165fe35ab3c7&units=metric"
 
@@ -20,10 +21,10 @@ const Weather = () => {
   },[])
 
   if(weather === null){
-    return <section> Loading... </section>
+    return <section className={styles['weather']}> Loading... </section>
   } else {
     return (
-      <section>{weather.name}의 날씨 : {weather.weather[0].main} / 기온 {Math.round(weather.main.temp)}°C </section>
+      <section className={styles['weather']}>{weather.name}의 날씨 : {weather.weather[0].main} / 기온 {Math.round(weather.main.temp)}°C </section>
     )
   }
 }

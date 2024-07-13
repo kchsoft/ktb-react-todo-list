@@ -1,19 +1,20 @@
-.input-name {
+.todo-input {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top : 20px
+  margin-bottom: 20px;
+  margin-top : 10px;
 }
 
-input[type="text"] {
+.todo-input input {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 16px;
+  width: 300px;
 }
 
-.name-submit-btn {
-  border-radius: 10px;
+.todo-input button {
+  border-radius: 5px;
   border: none;
   background-color: #007BFF;
   color: white;
@@ -24,10 +25,10 @@ input[type="text"] {
   transition: background-color 0.3s ease;
 }
 
-.name-submit-btn:hover {
+.todo-input button:hover {
   background-color: #0056b3;
 }
 
-.name-submit-btn:active {
-  transform: scale(0.98); /* 클릭 시 살짝 줄어듦 */
+.todo-input button:active {
+  transform: scale(0.98);
 }

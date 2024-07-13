@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from '../../../css/Main/ToDoItem/DeleteBtn.module.css'
 
 const DeleteBtn = ({toDo, setToDoList}) => {
 
@@ -9,7 +10,7 @@ const DeleteBtn = ({toDo, setToDoList}) => {
   }
 
   return (
-    <button onClick={deleteToDo}>삭제</button>
+    <button className={styles['delete-btn']} onClick={deleteToDo}> 삭제 </button>
   )
 }
 

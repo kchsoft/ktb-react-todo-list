@@ -1,0 +1,25 @@
+.todo-item {
+  display: grid;
+  grid-template-columns: 10% 40% 20% 20% 10%;
+  align-items: center;
+  font-size: 18px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.todo-item .complete-box {
+  width : 20px;
+  height : 20px;
+  grid-column: 1/2;
+  margin-left: 25px;
+}
+
+.todo-item .todo {
+  grid-column: 2/3;
+  text-align: center;
+}
+
+.todo-item .line-through {
+  text-decoration: line-through;
+  color: #888;
+}

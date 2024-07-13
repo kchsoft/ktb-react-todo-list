@@ -1,14 +1,15 @@
 import CreatedBy from "./CreatedBy";
 import Weather from "./Weather";
+import styles from '../../css/Footer/Footer.module.css'
 import ThemeToggleBtn from "./ThemeToggleBtn";
 
 const Footer = () => {
 
   return( 
-  <footer className="footer">
+  <footer className={styles['footer']}>
     <CreatedBy/>
     <Weather/>
-    <ThemeToggleBtn/>
+    {/* <ThemeToggleBtn/> */}
   </footer>
   )
 };

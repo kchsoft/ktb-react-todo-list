@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ShowDate = ({className,date}) => {
+const ShowDate = ({date,className}) => {
   if(date === undefined) return
   const year = date.getFullYear()
   const month = date.getMonth()

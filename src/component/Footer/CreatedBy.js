@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from '../../css/Footer/CreatedBy.module.css'
 
 const CreatedBy = () => {
   return (
-    <section>CreatedBy Evan</section>
+    <section className={styles['created-by']}>CreatedBy Evan</section>
   )
 }
 

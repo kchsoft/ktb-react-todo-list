@@ -1,0 +1,21 @@
+.delete-btn {
+  grid-column: 5 / 6;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  background-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.delete-btn:active {
+  transform: scale(0.98);
+}

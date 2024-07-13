@@ -1,5 +1,6 @@
 
 import React from 'react'
+import styles from '../../css/Main/ToDoInput.module.css'
 
 const ToDoInput = ({setToDoList,toDoList,toDoRef}) => {
 
@@ -28,7 +29,7 @@ const ToDoInput = ({setToDoList,toDoList,toDoRef}) => {
   }
   
   return (
-    <section className='todo-input'>
+    <section className={styles['todo-input']}>
       <input type="text" ref={toDoRef} placeholder='할 일을 적어 주세요! :)'/>
       <button onClick={addToDoItem}> 작성 </button>
     </section>
