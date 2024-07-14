@@ -3,6 +3,7 @@ import ShowDate from './ToDoItem/ShowDate'
 import DeleteBtn from './ToDoItem/DeleteBtn'
 import ToDoItemStyles from '../../css/Main/ToDoItem/ToDoItem.module.css'
 import DateStyles from '../../css/Main/ToDoItem/ShowDate.module.css'
+import ToDoListKey from '../../ToDoListKey'
 
 
 const ToDoItem = ({toDo,setToDoList}) => {
@@ -10,18 +11,20 @@ const ToDoItem = ({toDo,setToDoList}) => {
 
   const completeCheck = () =>{
     setIsComplete(!isComplete)
-    setToDoList((oldList) => 
-      oldList.map((old) => {
+    setToDoList((oldList) =>{ 
+      const newList = oldList.map((old) => {
         if(old.registerDate === toDo.registerDate){
           return {
             ...old,
             complete : !old.complete,
-            completeDate : (old.completeDate === undefined) ? new Date() : undefined
+            completeDate : (old.completeDate === 'not-complete') ? new Date() : 'not-complete'
           }
         }
         return old
       })
-    )
+      localStorage.setItem(ToDoListKey,JSON.stringify(newList))
+      return newList
+    })
   }
 
   return (

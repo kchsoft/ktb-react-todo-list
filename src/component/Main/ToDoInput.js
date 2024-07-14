@@ -1,6 +1,7 @@
 
 import React from 'react'
 import styles from '../../css/Main/ToDoInput.module.css'
+import ToDoListKey from '../../ToDoListKey'
 
 const ToDoInput = ({setToDoList,toDoList,toDoRef}) => {
 
@@ -13,11 +14,13 @@ const ToDoInput = ({setToDoList,toDoList,toDoRef}) => {
       registerDate : new Date(),
       toDo : item,
       complete : false,
-      completeDate : undefined
+      completeDate : 'not-complete'
     }
-
-    setToDoList((oldList) => [...oldList,newToDo])
+    
+    const newList = [...toDoList,newToDo]
+    setToDoList(newList)
     toDoRef.current.value = ''
+    localStorage.setItem(ToDoListKey,JSON.stringify(newList))
   }
   
   const checkDuplicateToDo = (item) => {
