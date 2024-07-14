@@ -9,13 +9,14 @@ const nameKey = 'ToDoListName'
 
 const Header = () =>{
 
-  let localName = localStorage.getItem(nameKey)
-  const [name,setName] = useState(localName)
-  const nameRef = useRef(localName)
+  
+  const [name,setName] = useState('')
+  const nameRef = useRef('')
   const [inputClass,setInputClass] = useState()
   const [displayClass,setDisplayClass] = useState()
 
   const loadName= () => {
+    const localName = localStorage.getItem(nameKey)
     if(localName === null || localName === ''){ 
       setInputClass(InputStyles['input-name'])
       setDisplayClass(`${DisplayStyles['display-name']} ${HeaderStyles.hidden}`)
