@@ -33,8 +33,8 @@ const Main = () => {
   }
 
   const checkToDoListValidation = (localToDo) => {
-    if(!Array.isArray(localToDo)) return false
     let notToDo = false
+    if(!Array.isArray(localToDo)) throw new Error()
 
     const verifiedToDoList = localToDo.filter((todo) => {
       if(typeof todo.registerDate === 'object' &&
