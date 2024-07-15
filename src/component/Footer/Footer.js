@@ -9,7 +9,7 @@ const Footer = () => {
   <footer className={styles['footer']}>
     <CreatedBy/>
     <Weather/>
-    {/* <ThemeToggleBtn/> */}
+    {/* someday... <ThemeToggleBtn/> */}
   </footer>
   )
 };

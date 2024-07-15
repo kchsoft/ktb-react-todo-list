@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import styles from '../../css/Footer/Weather.module.css'
 
-const weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=fdb568b79dbec452976c165fe35ab3c7&units=metric"
+const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`
 
 const Weather = () => {
   const [weather,setWeather] = useState(null)
-  
+  console.log(process.env.REACT_APP_WEATHER_API_KEY)
   const getWeather = async () => {
     try{
       const weatherAPI = await fetch(weatherURL)
