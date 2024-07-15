@@ -1,12 +1,13 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext } from 'react'
+import useLocalStorage from '../hook/useLocalStorage'
 
 const ToDoListContext = createContext(null)
 
 const ToDoListContextProvider = ({children}) => {
-  const [toDoList,setToDoList] = useState([]) // {registerDate, toDo, complete, completeDate}
+  const {toDoList,setToDoList,loadToDoList,addToDoItem,completeCheck,deleteToDoItem} = useLocalStorage()
 
   return (
-    <ToDoListContext.Provider value = {{toDoList,setToDoList}}>
+    <ToDoListContext.Provider value = {{toDoList,setToDoList,loadToDoList,addToDoItem,completeCheck,deleteToDoItem}}>
       {children}
     </ToDoListContext.Provider>
   )
