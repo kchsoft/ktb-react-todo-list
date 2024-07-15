@@ -1,19 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from '../../../css/Main/ToDoItem/DeleteBtn.module.css'
-import ToDoListKey from '../../../ToDoListKey'
+import { ToDoListContext } from '../../../context/ToDoListContext'
 
-const DeleteBtn = ({toDo, setToDoList}) => {
-
-  const deleteToDo = () => {
-    setToDoList((oldList) => {
-      const newList = oldList.filter((old) => old.registerDate !== toDo.registerDate)
-      localStorage.setItem(ToDoListKey,JSON.stringify(newList))
-      return newList
-    })
+const DeleteBtn = ({toDo}) => {
+  const {deleteToDoItem} = useContext(ToDoListContext)
+  
+  const clickDelBtn = () => {
+    deleteToDoItem(toDo)
   }
 
   return (
-    <button className={styles['delete-btn']} onClick={deleteToDo}> 삭제 </button>
+    <button className={styles['delete-btn']} onClick={clickDelBtn}> 삭제 </button>
   )
 }
 

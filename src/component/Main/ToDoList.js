@@ -4,12 +4,12 @@ import styles from '../../css/Main/ToDoList.module.css'
 import {ToDoListContext} from '../../context/ToDoListContext'
 
 const ToDoList = () => {
-  const {toDoList,setToDoList} = useContext(ToDoListContext)
+  const {toDoList} = useContext(ToDoListContext)
   return (
     <section className={styles['todo-list']}>
       {toDoList.map(toDo => {
           console.log(toDo.registerDate)
-          return <ToDoItem key={toDo.registerDate} toDo={toDo} setToDoList={setToDoList}/>
+          return <ToDoItem key={toDo.registerDate} toDo={toDo}/>
         })
       }  
     </section>
