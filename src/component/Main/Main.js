@@ -1,12 +1,13 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef} from "react";
 import ToDoInput from "./ToDoInput";
 import ToDoList from "./ToDoList";
 import ToDoCategory from "./ToDoCategory";
 import ToDoListKey from "../../ToDoListKey";
 import styles from '../../css/Main/Main.module.css'
+import {ToDoListContext} from "../../context/ToDoListContext";
 
 const Main = () => {
-  const [toDoList, setToDoList] = useState([]) // {registerDate, toDo, complete, completeDate}
+  const {setToDoList} = useContext(ToDoListContext) 
   const toDoRef = useRef()
 
   const loadToDoList = () => {
@@ -57,9 +58,9 @@ const Main = () => {
 
   return( 
   <main className={styles['main']}>
-    <ToDoInput setToDoList={setToDoList} toDoList={toDoList} toDoRef={toDoRef}/>
+    <ToDoInput toDoRef={toDoRef}/>
     <ToDoCategory/>
-    <ToDoList toDoList={toDoList} setToDoList={setToDoList}/>
+    <ToDoList/>
   </main>
   )
 };

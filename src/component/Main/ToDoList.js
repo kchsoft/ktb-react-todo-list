@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ToDoItem from './ToDoItem'
 import styles from '../../css/Main/ToDoList.module.css'
+import {ToDoListContext} from '../../context/ToDoListContext'
 
-const ToDoList = ({toDoList,setToDoList}) => {
+const ToDoList = () => {
+  const {toDoList,setToDoList} = useContext(ToDoListContext)
   return (
     <section className={styles['todo-list']}>
       {toDoList.map(toDo => {
+          console.log(toDo.registerDate)
           return <ToDoItem key={toDo.registerDate} toDo={toDo} setToDoList={setToDoList}/>
         })
       }  

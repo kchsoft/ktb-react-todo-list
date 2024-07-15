@@ -1,7 +1,6 @@
 import CreatedBy from "./CreatedBy";
 import Weather from "./Weather";
 import styles from '../../css/Footer/Footer.module.css'
-import ThemeToggleBtn from "./ThemeToggleBtn";
 
 const Footer = () => {
 

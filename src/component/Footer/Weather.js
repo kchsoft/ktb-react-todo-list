@@ -5,7 +5,6 @@ const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=seoul&appi
 
 const Weather = () => {
   const [weather,setWeather] = useState(null)
-  console.log(process.env.REACT_APP_WEATHER_API_KEY)
   const getWeather = async () => {
     try{
       const weatherAPI = await fetch(weatherURL)

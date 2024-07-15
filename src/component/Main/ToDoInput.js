@@ -1,9 +1,11 @@
 
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from '../../css/Main/ToDoInput.module.css'
 import ToDoListKey from '../../ToDoListKey'
+import {ToDoListContext} from '../../context/ToDoListContext'
 
-const ToDoInput = ({setToDoList,toDoList,toDoRef}) => {
+const ToDoInput = ({toDoRef}) => {
+  const {toDoList, setToDoList} = useContext(ToDoListContext)
 
   const addToDoItem = () => {
     const item = toDoRef.current.value
