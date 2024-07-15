@@ -54,7 +54,7 @@ const Main = () => {
 
   useEffect(() => {
     loadToDoList()
-  },[])
+  })
 
   return( 
   <main className={styles['main']}>
