@@ -7,7 +7,7 @@ const useLocalStorage = () => {
   const loadToDoList = () => {
     try{      
       const localToDo = localStorage.getItem(ToDoListKey)
-      if(localToDo === '') return
+      if(localToDo === '' || localToDo === null) return
 
       const toDoObject = JSON.parse(localToDo).map((todo) => ({
         ...todo,
